@@ -53,6 +53,7 @@ int					ft_toupper(int c);
 int					ft_tolower(int c);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
+char				*ft_strrm(char const *s, char c, size_t n);
 void				ft_putendl(char const *s);
 void				ft_putnbr(int n);
 void				ft_putchar_fd(char c, int fd);
