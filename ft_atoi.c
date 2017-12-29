@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 13:28:44 by scornaz           #+#    #+#             */
-/*   Updated: 2017/12/29 13:08:36 by scornaz          ###   ########.fr       */
+/*   Updated: 2017/12/29 15:06:54 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 static long		atoi_base(const char *str, int base)
 {
-	long res;
+	long		res;
+	const char	*digits;
 
+	digits = "0123456789ABCDEF";
+	res = 0;
 	while (*str && ft_isdigit(*str))
 	{
 		res = (res * base) +
-			ft_strchr("0123456789ABCDEF", *str) - str;
+			(ft_strchr(digits, *str) - digits);
 		++str;
 	}
 	return (res);
@@ -30,7 +33,6 @@ int				ft_atoi(const char *str)
 	long	res;
 	int		neg;
 
-	res = 0;
 	neg = 0;
 	while (ft_issep(*str))
 		str++;
