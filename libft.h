@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:42:22 by scornaz           #+#    #+#             */
-/*   Updated: 2017/12/11 18:40:36 by scornaz          ###   ########.fr       */
+/*   Updated: 2017/12/29 12:25:45 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
+void				free_strsplit(char **str);
 int					ft_strany(char c, char*str);
 
 unsigned int		ft_fact(unsigned int nb);
@@ -96,5 +97,7 @@ char				**ft_all_perms(char *s);
 char				*ft_swapchar(char *s, int ind1, int ind2);
 char				*ft_rotate(const char *s, int rotation);
 void				ft_print_2d(char **matrix);
+
+int					get_next_line(int fd, char **line);
 
 #endif
