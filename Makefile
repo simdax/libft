@@ -17,7 +17,6 @@ $(NAME): $(OBJS)
 	ranlib $(NAME)
 
 %.o: %.c
-	@echo $(CC) -c $(INCLUDES) $(FLAGS) $@ -o $<
 	$(CC) -c $(INCLUDES) $(FLAGS) $< -o $@
 
 clean:
