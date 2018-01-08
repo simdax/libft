@@ -47,7 +47,7 @@ static t_list	*merge(t_list *one, t_list *two,
   return (head);
 }
 
-t_list	*sort(t_list *list, int (*cmp)(t_list*, t_list*))
+t_list	*ft_lstsort(t_list *list, int (*cmp)(t_list*, t_list*))
 {
   t_list	*half;
   t_list	*tmp;
@@ -57,5 +57,5 @@ t_list	*sort(t_list *list, int (*cmp)(t_list*, t_list*))
   half = find_middle(list);
   tmp = half->next;
   half->next = NULL;
-  return (merge(sort(list, cmp), sort(tmp, cmp), cmp));
+  return (merge(ft_lstsort(list, cmp), ft_lstsort(tmp, cmp), cmp));
 }

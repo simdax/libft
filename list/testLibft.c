@@ -11,6 +11,6 @@ int	main(void)
     ft_lstadd(&list,
 	      ft_lstnew(mots[i], strlen(mots[i]))
 	      );
-  list = sort(list, ft_cmp_strlen);
+  list = ft_lstsort(list, ft_cmp_strlen);
   ft_lstiter(list, ft_lstprint);
 }
