@@ -1,33 +1,61 @@
-#include "../libft.h"
-#include <stdarg.h>
-#include <unistd.h>
+#include "includes.h"
 
-void	print(t_list *el, void *mem)
+static t_list	*find_middle(t_list *head)
 {
-  int i = 0;
-  
-  while(i < 2)
+  t_list *half;
+
+  half = head;
+  while (head->next && head->next->next)
     {
-      write(1, mem, strlen(mem));
-      mem += strlen(mem);
-      ++i;
+      half = half->next;
+      head = head->next->next;
     }
+  return (half);
 }
 
-int	main(void)
+static void	put(t_list **src, t_list **dst)
 {
-  t_list	*list;
-  char		*mots[3] = {"io", "ttrs", "truc de fou"};
-  int i = 3;
+  if (!(*dst))
+    *dst = *src;
+  else
+    {
+      (*dst)->next = *src;
+      *dst = (*dst)->next;
+    }
+  *src = (*src)->next;
+}
 
-  list = NULL;
-  while (--i >= 0)
-    ft_lstadd(&list,
-	      ft_lstnew(mots[i], strlen(mots[i]))
-	      );
-  void *mem = malloc(1000);
-  bzero(mem, 1000);
-  strcpy(mem, "coucou");
-  strcat(mem, "caca");
-  ft_lstiter2(list, print, mem);
+static t_list	*merge(t_list *one, t_list *two,
+                       int (*cmp)(t_list*, t_list*))
+{
+  t_list	*tmp;
+  t_list	*head;
+
+  head = 0;
+  tmp = 0;
+  while (1)
+    {
+      if (!one && !two)
+        break;
+      else if (!two || (!one ? 0 : cmp(one, two)))
+        put(&one, &tmp);
+      else
+        put(&two, &tmp);
+      if (!head)
+        head = tmp;
+    }
+  return (head);
+}
+
+t_list	*sort(t_list *list, int (*cmp)(t_list*, t_list*))
+{
+  t_list	*half;
+  t_list	*tmp;
+
+  if (!list || !list->next)
+    return (list);
+  half = find_middle(list);
+  tmp = half->next;
+  half->next = NULL;
+  return (merge(sort(list, cmp), sort(tmp, cmp), cmp));
 }
