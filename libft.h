@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:42:22 by scornaz           #+#    #+#             */
-/*   Updated: 2017/12/31 13:29:02 by simdax           ###   ########.fr       */
+/*   Updated: 2018/01/09 14:39:45 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int					ft_memcmp(const void *s, const void *s2, size_t len);
 void				*ft_memalloc(size_t size);
 void				*ft_memdel(void **ap);
 
-int					ft_nbrsize(int nbr);
+size_t					ft_nbrsize(int nbr);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
 int					ft_isalpha(int c);
