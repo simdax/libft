@@ -6,12 +6,11 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 21:21:59 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/01 21:21:12 by simdax           ###   ########.fr       */
+/*   Updated: 2018/01/11 13:59:34 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdarg.h>
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
