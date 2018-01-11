@@ -6,7 +6,7 @@
 /*   By: simdax </var/spool/mail/simdax>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 14:25:48 by simdax            #+#    #+#             */
-/*   Updated: 2018/01/08 17:56:35 by simdax           ###   ########.fr       */
+/*   Updated: 2018/01/11 10:03:45 by simdax           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "../libft.h"
 
+int	ft_cmp_rstr(t_list *one, t_list *two);
 int	ft_lstgetmax(t_list *list, int val,
                       int (*f)(t_list *el, int val));
 t_list	*ft_lstsort(t_list *list, int (*cmp)(t_list*, t_list*));

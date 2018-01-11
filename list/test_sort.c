@@ -9,13 +9,13 @@ void	p(t_list *el)
 
 int cmp(t_list *one, t_list *two)
 {
-  return (ft_strlen(one->content) < ft_strlen(two->content));
+  return (!ft_strcmp(one->content, two->content));
 }
 
 int	main(void)
 {
   t_list	*list;
-  char		*mots[5] = {"sali", "fsdfadf", "io", "ttrs", "truc de fou"};
+  char		*mots[5] = {"ft_coucou.c", "ft_coucou.o", "Makefile", "list"};
   int i = 5;
 
   list = NULL;
