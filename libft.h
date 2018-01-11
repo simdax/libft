@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:42:22 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/11 13:53:36 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/11 17:50:01 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,5 +106,9 @@ char			*ft_rotate(const char *s, int rotation);
 void			ft_print_2d(char **matrix);
 
 int				get_next_line(int fd, char **line);
+
+int		ft_max(int one, int two);
+int		ft_min(int one, int two);
+
 
 #endif

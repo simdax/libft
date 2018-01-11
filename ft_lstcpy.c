@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 13:59:41 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/11 14:00:30 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/11 17:25:49 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ t_list	*ft_cpyrev(t_list *orig)
 		ft_lstadd(&ret, ft_lstnew(orig->content, orig->content_size));
 		orig = orig->next;
 	}
-	return ret;
+	return (ret);
 }
