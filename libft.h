@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:42:22 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/11 17:50:01 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/11 19:57:00 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-void			ft_lstreduce(t_list *list, void (*f)(void *a, t_list *b), void *val);
+void			ft_lstreduce(t_list *list, void (*f)(void *a, t_list *b, void *opts), void *val, void *opts);
 t_list			*ft_lstnew(void const *content, size_t content_size);
 t_list			*ft_cpyrev(t_list *orig);
 void			ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
