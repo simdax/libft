@@ -1,6 +1,6 @@
 #include "ft_maths.h"
 
-float	ft_root(int nb, int exp)
+float	ft_root(float nb, float exp)
 {
   double i = 1;
   double res = 0;
