@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 19:22:23 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/12 17:25:01 by scornaz          ###   ########.fr       */
+/*   Created: 2018/01/17 17:13:17 by scornaz           #+#    #+#             */
+/*   Updated: 2018/01/17 17:13:17 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@ void	ft_lstadd(t_list **alst, t_list *new)
 
 void	ft_lstaddlast(t_list **list, t_list *new)
 {
-  t_list *head;
+	t_list *head;
 
-  head = *list;
-  if (head)
-    {
-      while (head->next)
-        head = head->next;
-      head->next = new;
-    }
-  else
-    *list = new;
+	head = *list;
+	if (head)
+	{
+		while (head->next)
+			head = head->next;
+		head->next = new;
+	}
+	else
+		*list = new;
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 21:21:59 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/11 13:59:34 by scornaz          ###   ########.fr       */
+/*   Created: 2018/01/17 17:13:51 by scornaz           #+#    #+#             */
+/*   Updated: 2018/01/17 17:13:51 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_lstiter2(t_list *lst, void (*f)(t_list *elem, void *args), void *mem)
 {
 	while (lst)
 	{
-	  f(lst, mem);
-	  lst = lst->next;
+		f(lst, mem);
+		lst = lst->next;
 	}
 }

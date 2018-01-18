@@ -6,13 +6,14 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 16:12:40 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/11 19:56:26 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/17 17:14:10 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstreduce(t_list *list, void (*f)(void *a, t_list *b, void *opts), void *val, void *opts)
+void	ft_lstreduce(t_list *list, void (*f)(void *a, t_list *b, void *opts),
+					void *val, void *opts)
 {
 	while (list)
 	{
