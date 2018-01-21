@@ -11,7 +11,6 @@ OBJS := $(FILES:%.c=%.o)
 INCLUDES := $(addprefix -I, $(INCLUDES))
 
 all: $(NAME)
-	make -C printf b
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)

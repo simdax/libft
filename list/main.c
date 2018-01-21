@@ -5,13 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-<<<<<<< HEAD
-/*   Created: 2018/01/09 15:15:34 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/09 15:19:05 by scornaz          ###   ########.fr       */
-=======
-/*   Created: 2018/01/17 17:10:25 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/17 17:10:25 by scornaz          ###   ########.fr       */
->>>>>>> cddf03c3f17e2d501e77932475d39ac8cef2f739
+/*   Created: 2018/01/21 16:46:51 by scornaz           #+#    #+#             */
+/*   Updated: 2018/01/21 16:46:51 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +38,7 @@ static void		put(t_list **src, t_list **dst)
 }
 
 static t_list	*merge(t_list *one, t_list *two,
-<<<<<<< HEAD
 		int (*cmp)(t_list*, t_list*))
-=======
-						int (*cmp)(t_list*, t_list*))
->>>>>>> cddf03c3f17e2d501e77932475d39ac8cef2f739
 {
 	t_list	*tmp;
 	t_list	*head;

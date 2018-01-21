@@ -5,12 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 14:42:22 by scornaz           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2018/01/21 16:21:48 by scornaz          ###   ########.fr       */
-=======
-/*   Updated: 2018/01/17 11:15:14 by scornaz          ###   ########.fr       */
->>>>>>> cddf03c3f17e2d501e77932475d39ac8cef2f739
+/*   Created: 2018/01/21 16:45:30 by scornaz           #+#    #+#             */
+/*   Updated: 2018/01/21 16:45:42 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +66,7 @@ void			ft_putstr_fd(char const*s, int fd);
 void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
  void		 	ft_putstr_utf8(int *str);
-int				ft_putchar_utf8(int str)
+int				ft_putchar_utf8(int str);
 
 char			*ft_strdup(const char *s1);
 char			*ft_strndup(const char *s1, size_t n);
