@@ -6,7 +6,7 @@ OBJS = $(FILES:%.c=%.o)
 CC = gcc -g
 
 include list/make.dep
-include gnl/make.dep
+#include gnl/make.dep
 
 INCLUDES := $(addprefix -I, $(INCLUDES))
 

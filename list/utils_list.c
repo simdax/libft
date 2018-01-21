@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_list.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: simdax </var/spool/mail/simdax>            +#+  +:+       +#+        */
+/*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/08 14:58:00 by simdax            #+#    #+#             */
-/*   Updated: 2018/01/08 15:04:27 by simdax           ###   ########.fr       */
+/*   Created: 2018/01/21 12:16:46 by scornaz           #+#    #+#             */
+/*   Updated: 2018/01/21 12:16:48 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 
 void	ft_lstprint(t_list *el)
 {
-  write(1, el->content, ft_strlen(el->content));
-  write(1, " ", 1);
+	write(1, el->content, ft_strlen(el->content));
+	write(1, " ", 1);
 }
