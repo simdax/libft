@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 18:00:51 by scornaz           #+#    #+#             */
-/*   Updated: 2017/11/12 14:24:32 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/15 14:51:50 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	while (n--)
-		*(unsigned char *)s++ = 0;
+	unsigned char	*cast;
+
+	cast = s;
+	while (n)
+	{
+		*cast = 0;
+		++cast;
+		--n;
+	}
 }

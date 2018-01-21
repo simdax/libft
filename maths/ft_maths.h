@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strdup.c                                           :+:      :+:    :+:   */
+/*   ft_maths.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 20:18:06 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/15 15:29:10 by scornaz          ###   ########.fr       */
+/*   Created: 2018/01/21 12:20:31 by scornaz           #+#    #+#             */
+/*   Updated: 2018/01/21 12:25:08 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#ifndef FT_MATHS_H
+#define FT_MATHS_H
+
 #include <stdlib.h>
+#include <stdio.h>
+#include "../libft.h"
 
-char	*ft_strdup(char *s1)
-{
-	char			*cpy;
-	unsigned int	i;
+float	ft_sqrt(float nb);
+float	ft_div(float a, float b);
+float	ft_root(float nb, float root);
+float	ft_pow2(float nb, float pow);
+double	ft_pow( double base, double power );
+double	ft_pow3(double base, double power);
+int		is_prime(int nb);
+void	prime_factors(int nb);
+int		gcd(int a, int b);
 
-	i = 0;
-	while (s1[i++])
-		;
-	if (!(cpy = (char*)malloc(sizeof(char) * i)))
-		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
-		cpy[i] = s1[i];
-		++i;
-	}
-	cpy[i] = 0;
-	return (cpy);
-}
+#endif 

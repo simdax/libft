@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strdup.c                                           :+:      :+:    :+:   */
+/*   ft_lstcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 20:18:06 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/15 15:29:10 by scornaz          ###   ########.fr       */
+/*   Created: 2018/01/11 13:59:41 by scornaz           #+#    #+#             */
+/*   Updated: 2018/01/11 17:25:49 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(char *s1)
+t_list	*ft_cpyrev(t_list *orig)
 {
-	char			*cpy;
-	unsigned int	i;
+	t_list *ret;
 
-	i = 0;
-	while (s1[i++])
-		;
-	if (!(cpy = (char*)malloc(sizeof(char) * i)))
-		return (NULL);
-	i = 0;
-	while (s1[i])
+	ret = 0;
+	while (orig)
 	{
-		cpy[i] = s1[i];
-		++i;
+		ft_lstadd(&ret, ft_lstnew(orig->content, orig->content_size));
+		orig = orig->next;
 	}
-	cpy[i] = 0;
-	return (cpy);
+	return (ret);
 }

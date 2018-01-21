@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strdup.c                                           :+:      :+:    :+:   */
+/*   gcd.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 20:18:06 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/15 15:29:10 by scornaz          ###   ########.fr       */
+/*   Created: 2018/01/21 12:25:27 by scornaz           #+#    #+#             */
+/*   Updated: 2018/01/21 12:25:27 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "../libft.h"
+#include "ft_maths.h"
 
-char	*ft_strdup(char *s1)
+int gcd(int a, int b)
 {
-	char			*cpy;
-	unsigned int	i;
-
-	i = 0;
-	while (s1[i++])
-		;
-	if (!(cpy = (char*)malloc(sizeof(char) * i)))
-		return (NULL);
-	i = 0;
-	while (s1[i])
+	int max = ft_max(a, b);
+	int min = ft_min(a, b);
+	int tmp = 1;
+  
+	while ((tmp = max % min))
 	{
-		cpy[i] = s1[i];
-		++i;
+		max = min;
+		min = tmp;
 	}
-	cpy[i] = 0;
-	return (cpy);
+	return (min);
 }

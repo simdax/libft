@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/09 14:48:31 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/09 14:51:33 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/17 12:02:10 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 void	ft_free_strsplit(char **str)
 {
+	char	**cpy;
+
+	cpy = str;
 	while (*str)
-		free(*str);
-	*str = NULL;
-	free(str);
+		free(*str++);
+	free(cpy);
+	cpy = NULL;
 }

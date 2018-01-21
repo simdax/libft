@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strdup.c                                           :+:      :+:    :+:   */
+/*   ft_max.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 20:18:06 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/15 15:29:10 by scornaz          ###   ########.fr       */
+/*   Created: 2018/01/11 17:48:11 by scornaz           #+#    #+#             */
+/*   Updated: 2018/01/11 17:49:27 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
-
-char	*ft_strdup(char *s1)
+int		ft_max(int one, int two)
 {
-	char			*cpy;
-	unsigned int	i;
+	return (one > two ? one : two);
+}
 
-	i = 0;
-	while (s1[i++])
-		;
-	if (!(cpy = (char*)malloc(sizeof(char) * i)))
-		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
-		cpy[i] = s1[i];
-		++i;
-	}
-	cpy[i] = 0;
-	return (cpy);
+int		ft_min(int one, int two)
+{
+	return (one < two ? one : two);
 }
