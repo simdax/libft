@@ -3,8 +3,8 @@ LFT = -L.. -lft
 include make.dep
 
 all:
-	mv test test.c
-	gcc -g $(LFT) $(SRCS) test.c ; mv test.c test
+	#mv test test.c
+	gcc -fsanitize=address -g $(LFT) $(FFILES) test.c #; mv test.c test
 
 run: all
 	./a.out
