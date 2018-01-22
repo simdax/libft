@@ -6,11 +6,12 @@
 /*	 By: scornaz <marvin@42.fr>						+#+	 +:+	   +#+		  */
 /*												  +#+#+#+#+#+	+#+			  */
 /*	 Created: 2018/01/21 15:12:11 by scornaz		   #+#	  #+#			  */
-/*   Updated: 2018/01/21 16:20:35 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/22 15:58:16 by scornaz          ###   ########.fr       */
 /*																			  */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 static void 	code_to_utf8(unsigned char *const buffer, const unsigned int code)
 {
@@ -38,7 +39,6 @@ int				ft_putchar_utf8(int str)
 {
 	unsigned char	*unicode;
 	unsigned char	*cpy;
-	int				ret;
 
 	unicode = malloc(5);
 	ft_bzero(unicode, 5);
