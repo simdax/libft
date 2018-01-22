@@ -3,7 +3,8 @@ LFT = -L.. -lft
 include make.dep
 
 all:
-	gcc -g $(LFT) $(SRCS) test.c
+	mv test test.c
+	gcc -g $(LFT) $(SRCS) test.c ; mv test.c test
 
 run: all
 	./a.out

@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 16:45:30 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/21 16:45:42 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/22 12:57:33 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ char			**ft_all_perms(char *s);
 char			*ft_swapchar(char *s, int ind1, int ind2);
 char			*ft_rotate(const char *s, int rotation);
 void			ft_print_2d(char **matrix);
+void			ft_print_len(int len, int *data);
 
 int				get_next_line(int fd, char **line);
 
