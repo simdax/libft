@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   struct.h                                           :+:      :+:    :+:   */
+/*   unicode.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/11 13:35:16 by scornaz           #+#    #+#             */
-/*   Updated: 2017/11/11 19:11:33 by scornaz          ###   ########.fr       */
+/*   Created: 2018/01/23 11:46:23 by scornaz           #+#    #+#             */
+/*   Updated: 2018/01/23 11:46:27 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRUCT_H
-# define STRUCT_H
+#ifndef UNICODE_H
+#define UNICODE_H
 
-# include <string.h>
-
-typedef struct		s_list
-{
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
+unsigned char	*unicode_to_utf8(int str);
 
 #endif
