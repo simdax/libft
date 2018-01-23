@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 16:45:30 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/23 11:33:10 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/23 11:46:49 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include "array/array.h"
+# include "unicode/unicode.h"
 # include "list/includes.h"
 # include "gnl/get_next_line.h"
 # include "list/includes.h"
