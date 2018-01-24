@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 16:45:30 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/23 11:46:49 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/24 11:36:48 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char const*s, int fd);
 void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
- void		 	ft_putstr_utf8(int *str);
+void			ft_putstr_utf8(int *str);
 int				ft_putchar_utf8(int str);
 
 unsigned int	ft_fact(unsigned int nb);
@@ -63,7 +63,7 @@ char			*ft_rotate(const char *s, int rotation);
 void			ft_print_2d(char **matrix);
 void			ft_print_len(int len, int *data);
 
-int		ft_max(int one, int two);
-int		ft_min(int one, int two);
+int				ft_max(int one, int two);
+int				ft_min(int one, int two);
 
 #endif
