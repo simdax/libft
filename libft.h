@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/24 11:40:21 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/24 11:40:22 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/24 12:13:21 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,11 @@
 # include "gnl/get_next_line.h"
 # include "list/includes.h"
 # include "string/ft_string.h"
+# include "mem/mem.h"
+# include "print/print.h"
 
 int				ft_abs(int value);
 int				ft_notneg(int value);
-void			*ft_memset(void *b, int c, size_t len);
-void			ft_bzero(void *s, size_t n);
-void			*ft_memcpy(void *dst, const void *src, size_t n);
-void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
-void			*ft_memmove(void *dst, const void *src, size_t len);
-void			*ft_memchr(const void *s, int c, size_t n);
-int				ft_memcmp(const void *s, const void *s2, size_t len);
-void			*ft_memalloc(size_t size);
-void			*ft_memdel(void **ap);
-
 size_t			ft_nbrsize(int nbr);
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
