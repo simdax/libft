@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/24 12:08:11 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/24 12:08:39 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/24 12:30:41 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,5 @@ void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s, const void *s2, size_t len);
 void			*ft_memalloc(size_t size);
 void			*ft_memdel(void **ap);
-
 
 #endif
