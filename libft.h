@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/21 16:45:30 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/24 11:36:48 by scornaz          ###   ########.fr       */
+/*   Created: 2018/01/24 11:40:21 by scornaz           #+#    #+#             */
+/*   Updated: 2018/01/24 11:40:22 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@
 # include "list/includes.h"
 # include "string/ft_string.h"
 
+int				ft_abs(int value);
+int				ft_notneg(int value);
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
