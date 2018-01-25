@@ -1,22 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   cpy.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/24 12:02:40 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/25 14:27:39 by scornaz          ###   ########.fr       */
+/*   Created: 2018/01/25 14:49:16 by scornaz           #+#    #+#             */
+/*   Updated: 2018/01/25 17:22:47 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "unicode.h"
-#include <stdio.h>
+#include "libft.h"
 
-int	main(void)
+static size_t	size(int *str)
 {
-	ft_putstr_utf8(L"☺️🙃\n");
-	ft_putchar_utf8(L'☺');
-	printf("%s", transform_utf8(L"\nco👱ucou les 😜 de ouf"));
-	printf("%s", transform_utf8("🔭asd))"));
+	size_t	ret;
+
+	ret = 0;
+	while (*str)
+	{
+		++ret;
+		++str;
+	}
+	return (ret);
+}
+
+char			*ft_unicpy(int *uni_str)
+{
+	int		*ret;
+	size_t	len;
+
+	len = size(uni_str);
+	ret = malloc(sizeof(int) * len + 1);
+	len = 0;
+	while (*uni_str)
+	{
+		ret[len] = *uni_str;
+		++len;
+		++uni_str;
+	}
+	ret[len] = 0;
+	return (ret);
 }
