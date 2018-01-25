@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/25 14:49:16 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/25 17:22:47 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/25 21:06:46 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static size_t	size(int *str)
 
 char			*ft_unicpy(int *uni_str)
 {
-	int		*ret;
+	char	*ret;
 	size_t	len;
 
 	len = size(uni_str);
