@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 19:31:30 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/26 19:36:01 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/26 19:45:51 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int		ft_bigstrcmp(char *str, int len, ...)
 {
 	va_list	args;
-	
+
 	va_start(args, len);
 	while (len)
 	{
