@@ -6,14 +6,14 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 17:21:20 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/26 17:25:42 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/26 19:43:47 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "btree.h"
 #include <stdio.h>
 
-t_btree		*new_btree(void *data)
+t_btree			*new_btree(void *data)
 {
 	t_btree		*ret;
 
@@ -25,12 +25,14 @@ t_btree		*new_btree(void *data)
 	return (ret);
 }
 
-void		print_btree(t_btree *root)
+void			print(void *str, int depth, int rank)
 {
-	t_func f;
+	if (!rank)
+		printf("\n");
+	printf("%*s%*s ", 40 - depth * 8, "", rank * 5, (char*)str);
+}
 
-	printf("gauche\n");
-	btree_apply_left(root, print);
-	printf("droite\n");
-	btree_apply_right(root, print);
+inline void		print_btree(t_btree *root)
+{
+	btree_apply_level(root, print);
 }

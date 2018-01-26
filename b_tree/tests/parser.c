@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   insert.c                                           :+:      :+:    :+:   */
+/*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/26 13:54:52 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/26 19:19:20 by scornaz          ###   ########.fr       */
+/*   Created: 2018/01/26 19:25:00 by scornaz           #+#    #+#             */
+/*   Updated: 2018/01/26 19:42:20 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../btree.h"
-#include "string.h"
+#include "libft.h"
 
-int			mstrcmp(void *a, void *b)
+int		cmpf(void *a, void *b)
 {
-	return (strcmp((char*)a, (char*)b));
+	if (ft_strcmp((char*)a, "+"))
+		return (1);
+	return (0);
 }
 
-int			main(void)
+int		main(int argc, char **argv)
 {
-	t_btree	*head;
-	t_btree	*tmp;
+	t_btree *tree;
 
-	head = 0;
-	btree_insert(&head, "05", mstrcmp);
-	btree_insert(&head, "09", mstrcmp);
-	btree_insert(&head, "03", mstrcmp);
-	btree_insert(&head, "18", mstrcmp);
-	btree_insert(&head, "07", mstrcmp);
-	btree_insert(&head, "04", mstrcmp);
-	btree_insert(&head, "10", mstrcmp);
-	print_btree(head);
+	tree = 0;
+	++argv;
+	while (*argv)
+	{
+		btree_insert(&tree, *argv, cmpf);
+		++argv;
+	}
+	print_btree(tree);
 }

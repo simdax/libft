@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 15:13:02 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/26 17:19:56 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/26 19:43:26 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,28 @@ int			btree_level_count(t_btree *root)
 	return (right_nb > left_nb ? right_nb : left_nb);
 }
 
-static void	tree_level(t_btree *node, int depth, int first,
+static void	tree_level(t_btree *node, t_io args,
 					void (*apply)(void*, int, int))
 {
 	if (!node)
 		return ;
-	if (!depth)
-		apply(node->data, depth, 0);
+	if (!args.i)
+		apply(node->data, args.j, args.k);
 	else
 	{
-		tree_level(node->left, depth - 1, 3, apply);
-		tree_level(node->right, depth - 1, 3, apply);
+		--args.i;
+		if (node->left)
+		{
+			if (args.k)
+				++args.k;
+			tree_level(node->left, args, apply);
+		}
+		if (node->right)
+		{
+			if (node->left)
+				++args.k;
+			tree_level(node->right, args, apply);
+		}
 	}
 }
 
@@ -56,9 +67,9 @@ void		btree_apply_level(t_btree *root,
 
 	i = 0;
 	height = btree_level_count(root);
-	while (i < height)
+	while (i <= height)
 	{
-		tree_level(root, i, 3, apply);
+		tree_level(root, (t_io){i, i, 0}, apply);
 		++i;
 	}
 }

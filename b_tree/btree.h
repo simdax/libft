@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 10:26:06 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/26 17:25:54 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/26 19:41:26 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@ typedef struct		s_btree
 	struct s_btree	*right;
 	void			*data;
 }					t_btree;
+
+typedef struct		s_io
+{
+	int i;
+	int j;
+	int k;
+}					t_io;
 
 t_btree				*new_btree(void *data);
 void				btree_apply_prefix(t_btree *root, void
