@@ -6,23 +6,11 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 10:27:07 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/26 10:52:05 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/26 17:25:59 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "btree.h"
-
-t_btree		*new_btree(void *data)
-{
-	t_btree		*ret;
-
-	if (!(ret = malloc(sizeof(t_btree))))
-		return (0);
-	ret->right = 0;
-	ret->left = 0;
-	ret->data = data;
-	return(ret);
-}
 
 void		btree_apply_prefix(t_btree *root, void (*apply)(void *data))
 {
@@ -38,33 +26,34 @@ void		btree_apply_postfix(t_btree *root, void (*apply)(void *data))
 {
 	if (root)
 		apply(root->data);
-	if (root->left)
-		btree_apply_prefix(root->left, apply);
 	if (root->right)
-		btree_apply_prefix(root->right, apply);
+		btree_apply_postfix(root->right, apply);
+	if (root->left)
+		btree_apply_postfix(root->left, apply);
 }
 
 void		btree_apply_infix(t_btree *root, void (*apply)(void *data))
 {
 	if (root->left)
-	{
-		btree_apply_prefix(root->left, apply);
-		
-	}
+		btree_apply_infix(root->left, apply);
 	if (root)
 		apply(root->data);
 	if (root->right)
-		btree_apply_prefix(root->right, apply);
+		btree_apply_infix(root->right, apply);
 }
 
-#include <stdio.h>
-
-static void	print(void *data)
+void		btree_apply_left(t_btree *root, void (*apply)(void *data))
 {
-	printf("%s ", data);
+	if (root->left)
+		btree_apply_infix(root->left, apply);
+	if (root)
+		apply(root->data);
 }
 
-void		print_btree(t_btree *root)
+void		btree_apply_right(t_btree *root, void (*apply)(void *data))
 {
-	btree_apply_prefix(root, print);
+	if (root->right)
+		btree_apply_infix(root->right, apply);
+	if (root)
+		apply(root->data);
 }
