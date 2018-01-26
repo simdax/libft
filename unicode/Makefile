@@ -4,3 +4,6 @@ all:
 
 run: all
 	./a.out
+
+test: all
+	lldb ./a.out
