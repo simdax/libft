@@ -1,2 +1,2 @@
-FILES += unicode/unicode.c
+FILES += unicode/unicode.c unicode/cpy.c
 INCLUDES += unicode
