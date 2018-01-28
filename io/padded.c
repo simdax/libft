@@ -1,38 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser.c                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/26 19:25:00 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/26 19:55:24 by scornaz          ###   ########.fr       */
+/*   Created: 2018/01/17 16:06:29 by scornaz           #+#    #+#             */
+/*   Updated: 2018/01/28 13:03:28 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../btree.h"
-#include "libft.h"
+#include "io.h"
 
-#define	OPS "+" "-" "/" "*"
-#define NB_OPS 4
-
-int		cmpf(void *a, void *b)
+t_point		get_term_size(void)
 {
-	if (ft_bigstrcmp((char*)a, NB_OPS, "+", "-", "/", "*"))
-		return (1);
-	return (0);
-}
+	struct winsize w;
 
-int		main(int argc, char **argv)
-{
-	t_btree *tree;
-
-	tree = 0;
-	++argv;
-	while (*argv)
-	{
-		btree_insert(&tree, *argv, cmpf);
-		++argv;
-	}
-	print_btree(tree);
+	ioctl(0, STDOUT_FILENO, TIOCGWINSZ, &w);
+	return ((t_point){w.ws_row, w.ws_col});
 }

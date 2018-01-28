@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 12:20:31 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/24 11:29:01 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/28 12:50:52 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include "../libft.h"
+
+typedef struct	s_point
+{
+	int	x;
+	int	y;
+}				t_point;
 
 float	ft_sqrt(float nb);
 float	ft_div(float a, float b);

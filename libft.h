@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/24 11:40:21 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/24 12:31:19 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/28 13:05:03 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include "array/array.h"
+# include "maths/ft_maths.h"
 # include "unicode/unicode.h"
 # include "list/includes.h"
 # include "gnl/get_next_line.h"
@@ -24,6 +25,7 @@
 # include "string/ft_string.h"
 # include "mem/mem.h"
 # include "print/print.h"
+# include "io/io.h"
 
 int				ft_abs(int value);
 int				ft_notneg(int value);

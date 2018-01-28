@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 17:21:20 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/26 19:43:47 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/26 19:47:32 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_btree			*new_btree(void *data)
 	return (ret);
 }
 
-void			print(void *str, int depth, int rank)
+void			print(void *str, int depth, int rank, int global)
 {
 	if (!rank)
 		printf("\n");

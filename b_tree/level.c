@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 15:13:02 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/26 19:43:26 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/26 19:49:05 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ int			btree_level_count(t_btree *root)
 }
 
 static void	tree_level(t_btree *node, t_io args,
-					void (*apply)(void*, int, int))
+					   void (*apply)(void*, int, int, int))
 {
 	if (!node)
 		return ;
 	if (!args.i)
-		apply(node->data, args.j, args.k);
+		apply(node->data, args.j, args.k, args.h);
 	else
 	{
 		--args.i;
@@ -60,7 +60,7 @@ static void	tree_level(t_btree *node, t_io args,
 }
 
 void		btree_apply_level(t_btree *root,
-							void (*apply)(void *item, int depth, int is_first))
+							  void (*apply)(void *item,int, int, int))
 {
 	int		height;
 	int		i;
@@ -69,7 +69,7 @@ void		btree_apply_level(t_btree *root,
 	height = btree_level_count(root);
 	while (i <= height)
 	{
-		tree_level(root, (t_io){i, i, 0}, apply);
+		tree_level(root, (t_io){i, i, 0, height}, apply);
 		++i;
 	}
 }

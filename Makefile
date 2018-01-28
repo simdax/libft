@@ -11,6 +11,7 @@ include gnl/make.dep
 include unicode/make.dep
 include mem/make.dep
 include print/make.dep
+include io/make.dep
 
 OBJS := $(FILES:%.c=%.o)
 INCLUDES := $(addprefix -I, . $(INCLUDES))

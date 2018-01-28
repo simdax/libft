@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 10:26:06 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/26 19:41:26 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/01/26 19:48:29 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,10 @@ typedef struct		s_btree
 
 typedef struct		s_io
 {
-	int i;
-	int j;
-	int k;
+	int	i;
+	int	j;
+	int	k;
+	int	h;
 }					t_io;
 
 t_btree				*new_btree(void *data);
@@ -39,6 +40,6 @@ void				*btree_search_item(t_btree *root, void *data_ref,
 									int (*cmpf)(void*, void*));
 int					btree_level_count(t_btree *root);
 void				btree_apply_level(t_btree *root,
-						void (*apply)(void *item, int depth, int is_first));
+				  void (*apply)(void *item, int depth, int is_fi, int g));
 
 #endif
