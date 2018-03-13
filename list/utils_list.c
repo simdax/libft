@@ -13,8 +13,17 @@
 #include <unistd.h>
 #include "includes.h"
 
-void	ft_lstprint(t_list *el)
+static void     print(t_list *el)
 {
 	write(1, el->content, ft_strlen(el->content));
 	write(1, " ", 1);
+}
+
+void	ft_lstprint(t_list *el)
+{
+  while (el && el->content)
+    {
+      print(el);
+      el = el->next;
+    }
 }
