@@ -28,7 +28,7 @@ static void	array_realloc(t_array *array, size_t len)
 	free(tmp);
 }
 
-t_array		*new_array(size_t len, unsigned space)
+t_array		*array_new(size_t len, unsigned space)
 {
 	t_array *array;
 
@@ -41,7 +41,7 @@ t_array		*new_array(size_t len, unsigned space)
 	return (array);
 }
 
-void		free_array(t_array *array)
+void		array_free(t_array *array)
 {
 	free(array->mem);
 	free(array);

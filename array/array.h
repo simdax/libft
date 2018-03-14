@@ -24,8 +24,8 @@ typedef struct	s_array
 	int			size;
 }				t_array;
 
-t_array			*new_array();
-void			free_array(t_array *array);
+t_array			*array_new();
+void			array_free(t_array *array);
 void			array_add(t_array *array, void *val, unsigned len);
 
 #endif
