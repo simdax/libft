@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes.h"
+#include "lst_includes.h"
 
 static t_list	*find_middle(t_list *head)
 {

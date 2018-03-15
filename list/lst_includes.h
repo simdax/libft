@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INCLUDES_H
-# define INCLUDES_H
+#ifndef LST_INCLUDES_H
+# define LST_INCLUDES_H
 
 # include "../libft.h"
 
@@ -35,7 +35,7 @@ void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void			ft_lstiter2(t_list *lst, void (*f)(t_list *elem, void *args),
 						void *mem);
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-
+t_list			*ft_lstfind(t_list *el, int (*f)(t_list *el, void *cmp), void *cmp);
 t_list			*ft_lstsort(t_list *list, int (*cmp)(t_list*, t_list*));
 int				ft_cmp_strlen(t_list *one, t_list *two);
 int				ft_cmp_str(t_list *one, t_list *two);
