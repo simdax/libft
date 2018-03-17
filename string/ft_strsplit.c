@@ -34,7 +34,7 @@ static char		*copy(const char *s, char c)
 	i = 0;
 	while (s[i] && s[i] != c)
 		i++;
-	if (!(cpy = (char*)malloc(sizeof(char) * i)))
+	if (!(cpy = (char*)malloc(sizeof(char) * i + 1)))
 		return (NULL);
 	cpy[i] = '\0';
 	while (--i >= 0)
