@@ -19,22 +19,18 @@ static int	is_blank(char c)
 
 char		*ft_strtrim(char const *s)
 {
-	char	*copy;
 	int		start;
 	int		end;
 
-	copy = 0;
-	if (!(copy = (char*)s))
-		return (NULL);
-	start = -1;
-	end = -1;
-	while (is_blank(s[++start]))
-		;
-	while (copy[++end])
-		;
+	start = 0;
+	end = 0;
+	while (is_blank(s[start]))
+		++start;
+	while (s[end])
+	  ++end;
 	if (start == end)
-		return (ft_strdup(""));
-	while (is_blank(copy[end]))
+	  return (ft_strdup(""));
+	while (is_blank(s[end - 1]))
 	  --end;
-	return (ft_strsub(s, start, end));
+	return(ft_strsub(s, start, end - start));
 }
