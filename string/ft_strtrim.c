@@ -22,8 +22,8 @@ char		*ft_strtrim(char const *s)
 	char	*copy;
 	int		start;
 	int		end;
-	int		i;
 
+	copy = 0;
 	if (!(copy = (char*)s))
 		return (NULL);
 	start = -1;
@@ -34,14 +34,7 @@ char		*ft_strtrim(char const *s)
 		;
 	if (start == end)
 		return (ft_strdup(""));
-	while (is_blank(copy[--end]))
-		;
-	if (!(copy = (char*)malloc(sizeof(char) * (end - start))))
-		return (NULL);
-	s += start;
-	i = 0;
-	while (i <= end - start)
-		copy[i++] = *s++;
-	copy[i] = '\0';
-	return (copy);
+	while (is_blank(copy[end]))
+	  --end;
+	return (ft_strsub(s, start, end));
 }
