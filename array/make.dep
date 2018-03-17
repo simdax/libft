@@ -1,5 +1,5 @@
 HERE := array
-FFILES := array.c
+FFILES := array.c get_file_content.c
 
 FILES += $(addprefix $(HERE)/, $(FFILES))
 INCLUDES += $(HERE)

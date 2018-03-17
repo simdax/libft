@@ -17,6 +17,7 @@ static void	array_realloc(t_array *array, size_t len)
 	void	*tmp;
 	size_t	new_size;
 
+	printf("des reallocs\n");
 	tmp = array->mem;
 	new_size = 0;
 	while (new_size < len)
@@ -24,8 +25,10 @@ static void	array_realloc(t_array *array, size_t len)
 	array->size += new_size;
 	array->mem = malloc(array->type_len * array->size);
 	if (tmp)
-		ft_memcpy(array->mem, tmp, array->type_len * array->cursor);
-	free(tmp);
+	  {
+	    ft_memcpy(array->mem, tmp, array->type_len * array->cursor);
+	    free(tmp);
+	  }
 }
 
 t_array		*array_new(size_t len, unsigned space)
@@ -55,3 +58,12 @@ void		array_add(t_array *array, void *val, unsigned len)
 			val, array->type_len * len);
 	array->cursor += len;
 }
+
+/* void		array_for_each(t_array *array, void (*f)(void *el)) */
+/* { */
+/*   while (array->mem) */
+/*     { */
+/*       f(*array->mem); */
+/*       ++(array->mem); */
+/*     } */
+/* } */

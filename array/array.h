@@ -24,8 +24,10 @@ typedef struct	s_array
 	int			size;
 }				t_array;
 
-t_array			*array_new();
+t_array			*array_new(size_t len, unsigned space);
 void			array_free(t_array *array);
 void			array_add(t_array *array, void *val, unsigned len);
+void			array_for_each(t_array *array, void (*f)(void *el));
+char			*get_file_content(char *path);
 
 #endif
