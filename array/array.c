@@ -17,7 +17,6 @@ static void	array_realloc(t_array *array, size_t len)
 	void	*tmp;
 	size_t	new_size;
 
-	printf("des reallocs\n");
 	tmp = array->mem;
 	new_size = 0;
 	while (new_size < len)

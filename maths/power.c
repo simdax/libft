@@ -12,12 +12,12 @@
 
 #include "ft_maths.h"
 
-float	ft_pow(float nb, float pow)
+float	ft_pow3(float nb, float pow)
 {
 	float	res;
-	int		integer;
+	int	integer;
 	float	floating_part;
-	int		int_floating_part;
+	int	int_floating_part;
 	float	add;
 
 	integer = (int)pow;

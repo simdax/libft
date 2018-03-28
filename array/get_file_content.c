@@ -18,7 +18,8 @@ char     *get_file_content(char *path)
 	  array_add(txt, buffer, ret);
 	}
     }
-  file_content = ft_strdup(txt->mem);
+  file_content = malloc(txt->cursor + 1);
+  ft_memcpy(file_content, txt->mem, txt->cursor);
   file_content[txt->cursor] = 0;
   array_free(txt);
   return (file_content);
