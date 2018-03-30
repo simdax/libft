@@ -26,6 +26,9 @@
 # include "print/print.h"
 # include "numbers/numbers.h"
 
+# define EXIT_ERROR	exit(-1)
+# define MALLOC_ERROR	write(2, "malloc error", 12); EXIT_ERROR;
+
 int			ft_notneg(int value);
 size_t			ft_nbrsize(int nbr);
 char			*ft_swapchar(char *s, int ind1, int ind2);

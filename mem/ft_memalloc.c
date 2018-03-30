@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void		*ft_memalloc(size_t size)
 {
 	void	*ptr;
 
@@ -21,4 +22,10 @@ void	*ft_memalloc(size_t size)
 	while (size--)
 		((char*)ptr)[size] = 0;
 	return (ptr);
+}
+
+void		ft_malloc(void **ptr, size_t size)
+{
+	if (!(*ptr = malloc(size)))
+	  MALLOC_ERROR;
 }
