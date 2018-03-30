@@ -18,14 +18,17 @@ void		*ft_memalloc(size_t size)
 	void	*ptr;
 
 	if (!(ptr = malloc(size)))
-		return (NULL);
+	  return (NULL);
 	while (size--)
 		((char*)ptr)[size] = 0;
 	return (ptr);
 }
 
-void		ft_malloc(void **ptr, size_t size)
+void		*ft_malloc(size_t size)
 {
-	if (!(*ptr = malloc(size)))
+	void	*ptr;
+
+	if (!(ptr = malloc(size)))
 	  MALLOC_ERROR;
+	return (ptr);
 }
