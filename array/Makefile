@@ -15,3 +15,6 @@ debug: all
 
 valgrind: all
 	valgrind ./a.out
+
+norminette:
+	norminette

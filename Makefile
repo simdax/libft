@@ -36,3 +36,6 @@ fclean: clean
 
 re: fclean
 	make all
+
+norminette:
+	norminette
