@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 14:40:30 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/25 18:41:39 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/01 13:55:09 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,12 @@ void		array_free(t_array *array)
 	free(array);
 }
 
+void		array_free2(t_array *array, void(*f)(t_array *array))
+{
+	f(array);
+	free(array);
+}
+
 void		array_add(t_array *array, void *val, unsigned len)
 {
 	if (array->size - array->cursor < len)
@@ -57,12 +63,3 @@ void		array_add(t_array *array, void *val, unsigned len)
 			val, array->type_len * len);
 	array->cursor += len;
 }
-
-/* void		array_for_each(t_array *array, void (*f)(void *el)) */
-/* { */
-/*   while (array->mem) */
-/*     { */
-/*       f(*array->mem); */
-/*       ++(array->mem); */
-/*     } */
-/* } */
