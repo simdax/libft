@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 17:21:20 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/28 14:41:12 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/01 16:06:47 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,17 @@ t_btree			*new_btree(void *data)
 
 void			print(void *str, t_io args, void *opts)
 {
-	int level = args.j;
-	int width = ((t_point*)opts)->x;
-	int s = width / (1 << level);
-	int rank = args.k;	
-	int	space = !rank ? s / 2: s;
-		
+	int level;
+	int width;
+	int s;
+	int rank;
+	int	space;
+
+	level = args.j;
+	width = ((t_point*)opts)->x;
+	s = width / (1 << level);
+	rank = args.k;
+	space = !rank ? s / 2 : s;
 	if (!rank)
 		printf("\n");
 	printf("%*s", space, (char*)str ? (char*)str : " ");
@@ -41,7 +46,7 @@ void			print(void *str, t_io args, void *opts)
 inline void		print_btree(t_btree *root)
 {
 	t_point	size;
-	
+
 	size = get_term_size();
 	size.x /= 1.5;
 	btree_apply_level(root, &size, print);

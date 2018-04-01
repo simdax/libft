@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:08:37 by scornaz           #+#    #+#             */
-/*   Updated: 2018/03/31 23:52:25 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/01 16:16:08 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ char		*ft_strtrim(char const *s)
 	while (is_blank(s[start]))
 		++start;
 	while (s[end])
-	  ++end;
+		++end;
 	if (start == end)
-	  return (ft_strdup(""));
+		return (ft_strdup(""));
 	while (is_blank(s[end - 1]))
-	  --end;
-	return(ft_strsub(s, start, end - start));
+		--end;
+	return (ft_strsub(s, start, end - start));
 }
 
 char		*rm_char(char *str, char c)

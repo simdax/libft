@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 13:28:44 by scornaz           #+#    #+#             */
-/*   Updated: 2017/12/29 15:06:54 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/01 16:13:59 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,26 +45,26 @@ int				ft_atoi(const char *str)
 	return ((int)(neg ? -res : res));
 }
 
-float		ft_atof(const char *str)
+float			ft_atof(const char *str)
 {
-  int		int_part;
-  float		float_part;
-  char		*cpy;
-  char		*mark;
+	int			int_part;
+	float		float_part;
+	char		*cpy;
+	char		*mark;
 
-  mark = ft_strchr(str, '.');
-  if (mark && *mark)
-    {
-      cpy = ft_strsub(str, 0, mark - str);
-      int_part = ft_atoi(cpy);
-      ++mark;
-      float_part = ft_atoi(mark);
-      free(cpy);
-    }
-  else
-    {
-      int_part = ft_atoi(str);
-      float_part = 0;
-    }
-  return ((float)int_part + float_part / ft_pow(ft_nbrsize(float_part), 10)) ;
+	mark = ft_strchr(str, '.');
+	if (mark && *mark)
+	{
+		cpy = ft_strsub(str, 0, mark - str);
+		int_part = ft_atoi(cpy);
+		++mark;
+		float_part = ft_atoi(mark);
+		free(cpy);
+	}
+	else
+	{
+		int_part = ft_atoi(str);
+		float_part = 0;
+	}
+	return ((float)int_part + float_part / ft_pow(ft_nbrsize(float_part), 10));
 }

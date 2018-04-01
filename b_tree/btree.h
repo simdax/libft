@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 10:26:06 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/28 14:04:25 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/01 16:05:43 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ void				*btree_search_item(t_btree *root, void *data_ref,
 									int (*cmpf)(void*, void*));
 int					btree_level_count(t_btree *root);
 void				btree_apply_level(t_btree *root, void *data,
-								 void (*apply)(void *item, t_io, void*));
+									void (*apply)(void *item, t_io, void*));
 
 #endif

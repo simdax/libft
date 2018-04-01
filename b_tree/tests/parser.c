@@ -6,19 +6,16 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 19:25:00 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/26 19:55:24 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/01 16:07:53 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../btree.h"
 #include "libft.h"
 
-#define	OPS "+" "-" "/" "*"
-#define NB_OPS 4
-
 int		cmpf(void *a, void *b)
 {
-	if (ft_bigstrcmp((char*)a, NB_OPS, "+", "-", "/", "*"))
+	if (ft_bigstrcmp((char*)a, 4, "+", "-", "/", "*"))
 		return (1);
 	return (0);
 }
