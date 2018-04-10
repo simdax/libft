@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/24 11:40:21 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/28 13:05:03 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/01 16:15:05 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@
 # include "print/print.h"
 # include "numbers/numbers.h"
 
-# define EXIT_ERROR	exit(-1)
+# define EXIT_ERROR		exit(-1)
 # define MALLOC_ERROR	write(2, "malloc error", 12); EXIT_ERROR;
 
-int			ft_notneg(int value);
+int				ft_notneg(int value);
 size_t			ft_nbrsize(int nbr);
 char			*ft_swapchar(char *s, int ind1, int ind2);
 char			*ft_rotate(const char *s, int rotation);

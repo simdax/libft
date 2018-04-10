@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 12:26:35 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/24 11:31:12 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/01 16:11:19 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 float	ft_pow3(float nb, float pow)
 {
 	float	res;
-	int	integer;
+	int		integer;
 	float	floating_part;
-	int	int_floating_part;
+	int		int_floating_part;
 	float	add;
 
 	integer = (int)pow;

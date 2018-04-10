@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 13:28:44 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/10 18:33:15 by scornaz          ###   ########.fr       */
+/*   Created: 2018/04/10 18:38:48 by scornaz           #+#    #+#             */
+/*   Updated: 2018/04/10 18:38:48 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,12 @@ int				ft_atoi(const char *str)
 	return ((int)(neg ? -res : res));
 }
 
-float		ft_atof(const char *str)
+float			ft_atof(const char *str)
 {
-  int		int_part;
-  float		float_part;
-  char		*cpy;
-  char		*mark;
+	int			int_part;
+	float		float_part;
+	char		*cpy;
+	char		*mark;
 
   mark = ft_strchr(str, '.');
   if (mark && *mark)
