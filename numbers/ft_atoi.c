@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 13:28:44 by scornaz           #+#    #+#             */
-/*   Updated: 2017/12/29 15:06:54 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/10 18:33:15 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ float		ft_atof(const char *str)
       int_part = ft_atoi(cpy);
       ++mark;
       float_part = ft_atoi(mark);
+      if (!int_part && cpy[0] == '-')
+          float_part = -float_part;
       free(cpy);
     }
   else
@@ -66,5 +68,5 @@ float		ft_atof(const char *str)
       int_part = ft_atoi(str);
       float_part = 0;
     }
-  return ((float)int_part + float_part / ft_pow(ft_nbrsize(float_part), 10)) ;
+  return ((float)int_part + float_part / ft_pow(ft_nbrsize(float_part), 10));
 }
