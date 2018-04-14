@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/24 12:33:21 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/14 11:46:27 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/14 17:14:51 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char			*ft_sprintf(char *io, const char *str, ...)
 		{
 			args.cpy = ft_strchr(str, '%');
 			args.stock[args.count] = ft_strsub(str, 0, args.cpy - str);
-			args.flags = parse(args.cpy + 1);
+			args.flags = printf_parse(args.cpy + 1);
 			if (args.flags.star)
 				args.flags.width = va_arg(arg, int);
 			args.nums[args.count] = flags2print(arg, args.flags);

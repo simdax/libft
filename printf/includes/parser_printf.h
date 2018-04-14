@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/18 19:14:44 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/14 13:02:32 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/14 17:15:06 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct	s_flags
 # define MODIFIERS2	"hl"
 # define MODIFIERS1	"jz"
 
-t_flags			parse(char *str);
+t_flags			printf_parse(char *str);
 void			change_type(t_flags *flags);
 
 #endif

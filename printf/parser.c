@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/17 17:52:55 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/14 12:14:59 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/14 17:15:48 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ static int	matoi(char *str)
 	return (res);
 }
 
-t_flags		parse(char *str)
+t_flags		printf_parse(char *str)
 {
 	t_flags		flags;
 	char		*cpy;
