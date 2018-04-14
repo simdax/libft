@@ -6,12 +6,12 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/18 19:14:44 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/25 20:07:24 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/14 13:02:32 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PARSER_H
-# define PARSER_H
+#ifndef PARSER_PRINTF_H
+# define PARSER_PRINTF_H
 
 typedef struct	s_flags
 {

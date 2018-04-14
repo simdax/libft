@@ -14,7 +14,7 @@ all: $(NAME) $(DEPS)
 	@printf "\r\033[K""\r\033[K""\033[32m[LIBFT OK]\033[0m\n"
 
 %.o: %.c
-	$(CC) -c $(INCLUDES) $(FLAGS) $< -o $@
+	@$(CC) -c $(INCLUDES) $(FLAGS) $< -o $@
 	@printf "\r\033[K""\r\033[K""\033[32m[LIBFT] \033[0m""Compilation de "$@
 
 $(NAME): $(OBJS)
