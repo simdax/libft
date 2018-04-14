@@ -6,10 +6,13 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/01 16:01:39 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/01 16:02:12 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/14 11:38:26 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
 #include "array.h"
 
 char	*get_file_content(char *path)
