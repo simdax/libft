@@ -6,14 +6,14 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 16:47:04 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/01 16:14:17 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/14 12:27:38 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LST_INCLUDES_H
 # define LST_INCLUDES_H
 
-# include "../libft.h"
+# include <stdlib.h>
 
 typedef struct	s_list
 {

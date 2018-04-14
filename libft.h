@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/24 11:40:21 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/14 11:16:19 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/14 12:30:15 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@
 # include "mem/mem.h"
 # include "print/print.h"
 # include "numbers/numbers.h"
-# include "printf/includes/printf.h"
 
 # define EXIT_ERROR		exit(-1)
 # define MALLOC_ERROR	write(2, "malloc error", 12); EXIT_ERROR;

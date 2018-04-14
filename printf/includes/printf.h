@@ -6,15 +6,15 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 14:29:39 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/14 11:32:24 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/14 12:26:00 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef _PRINTF_H
 # define _PRINTF_H
 
-# include "libft.h"
-# include "parser.h"
+# include "ft_string.h"
+# include "parser_printf.h"
 # include "prototypes_ca.h"
 
 typedef struct	s_args {

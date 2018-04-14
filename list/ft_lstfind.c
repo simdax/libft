@@ -6,11 +6,11 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/01 16:08:55 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/01 16:09:19 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/14 12:27:53 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_string.h"
 
 t_list	*ft_lstfind(t_list *el, int (*f)(t_list *el, void *cmp), void *cmp)
 {

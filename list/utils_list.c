@@ -6,12 +6,12 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 16:50:02 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/01 16:09:43 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/14 12:28:13 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "lst_includes.h"
+#include "ft_string.h"
 
 static void	print(t_list *el)
 {
