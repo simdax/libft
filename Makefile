@@ -10,11 +10,11 @@ INCLUDES := $(addprefix -I, . $(DEPS) printf/includes)
 OBJS := $(FILES:%.c=%.o)
 
 all: $(NAME) $(DEPS)
-	@printf "\r\033[K""\r\033[K""\033[32m[LIBFT OK]\033[0m\n"
+	@printf "\033[1A\r\033[K""\r\033[K""\033[32m[LIBFT OK]\033[0m\n\n"
 
 %.o: %.c
 	@$(CC) -c $(INCLUDES) $(FLAGS) $< -o $@
-	@printf "\r\033[K""\r\033[K""\033[32m[LIBFT] \033[0m""Compilation de "$@
+	@printf "\033[1A\r\033[K""\r\033[K""\033[32m[LIBFT] \033[0m""Compilation de "$@"\n"
 
 $(NAME): $(OBJS)
 	@ar rc $(NAME) $(OBJS)
