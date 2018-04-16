@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   test_get_file_comment.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 10:53:07 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/16 20:02:09 by scornaz          ###   ########.fr       */
+/*   Created: 2018/04/16 17:42:59 by scornaz           #+#    #+#             */
+/*   Updated: 2018/04/16 20:02:27 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "printf.h"
+#include "get_next_line.h"
 
-# define BUFF_SIZE		64
-
-# include <sys/types.h>
-# include <limits.h>
-# include <stdio.h>
-# include "../libft.h"
-# include "unistd.h"
-# include <fcntl.h>
-
-int			get_next_line(int fd, char **line);
-char		*get_file_comment(char *path, char com_char);
-
-#endif
+int	main(void)
+{
+	printf("%s", get_file_comment("io", '#'));
+	printf("%s", get_file_comment("io", '@'));
+	return (0);
+}
