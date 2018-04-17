@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/01 13:55:16 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/01 17:38:18 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/17 16:15:36 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,12 @@ void		array_for_each2(t_array *array, void *data,
 		f(array->mem + array->type_len * i, data, array);
 		++i;
 	}
+}
+
+void		array_free3(t_array **array)
+{
+	array_free(*array);
+	*array = NULL;
 }
 
 void		*array_find(t_array *array, int (*f)(void *el, void *data),

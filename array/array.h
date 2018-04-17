@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 11:27:52 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/14 13:01:50 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/17 16:15:47 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct	s_array
 t_array			*array_new(size_t len, unsigned space);
 void			array_free(t_array *array);
 void			array_free2(t_array *array, void(*f)(t_array *mem));
+void			array_free3(t_array **array);
 void			array_add(t_array *array, void *val, unsigned len);
 void			array_for_each(t_array *array,
 								void (*f)(void *el, t_array *array));
