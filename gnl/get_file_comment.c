@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 17:38:56 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/16 20:11:08 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/17 19:03:10 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ char	*get_file_comment(char *path, char com_char)
 	t_array	*array;
 	int		i;
 
-	i = 0;
 	array = array_new(1, 16);
 	fd = open(path, O_RDONLY);
 	while (get_next_line(fd, &line) > 0)
 	{
+		i = 0;
 		while (ft_issep(line[i]))
 			++i;
 		if (line[i] != com_char)
