@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 14:40:30 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/11 15:20:01 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/17 11:29:04 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	array_realloc(t_array *array, size_t len)
 	while (new_size < len)
 		new_size += array->space;
 	array->size += new_size;
-	array->mem = malloc(array->type_len * array->size);
+	array->mem = ft_memalloc(array->type_len * array->size);
 	if (tmp)
 	{
 		ft_memcpy(array->mem, tmp, array->type_len * array->cursor);
