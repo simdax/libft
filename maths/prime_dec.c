@@ -12,7 +12,7 @@
 
 #include "ft_maths.h"
 
-int		round_up(float f)
+int		round_up(double f)
 {
 	return ((int)f + 1);
 }

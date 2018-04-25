@@ -12,7 +12,7 @@
 
 #include "ft_maths.h"
 
-float	ft_root(float nb, float exp)
+double	ft_root(double nb, double exp)
 {
 	double	i;
 	double	res;
@@ -36,7 +36,7 @@ float	ft_root(float nb, float exp)
 	return (res);
 }
 
-float	ft_sqrt(float nb)
+double	ft_sqrt(double nb)
 {
 	double	i;
 	double	res;
@@ -58,11 +58,11 @@ float	ft_sqrt(float nb)
 	return (res);
 }
 
-float	ft_div(float a, float b)
+double	ft_div(double a, double b)
 {
-	float	tmp;
-	float	res;
-	float	i;
+	double	tmp;
+	double	res;
+	double	i;
 	int		remainders[(int)b];
 
 	tmp = 0;

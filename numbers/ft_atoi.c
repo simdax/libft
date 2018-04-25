@@ -45,10 +45,10 @@ int				ft_atoi(const char *str)
 	return ((int)(neg ? -res : res));
 }
 
-float			ft_atof(const char *str)
+double			ft_atof(const char *str)
 {
 	int			int_part;
-	float		float_part;
+	double		double_part;
 	char		*cpy;
 	char		*mark;
 
@@ -58,15 +58,15 @@ float			ft_atof(const char *str)
 		cpy = ft_strsub(str, 0, mark - str);
 		int_part = ft_atoi(cpy);
 		++mark;
-		float_part = ft_atoi(mark);
+		double_part = ft_atoi(mark);
 		if (!int_part && cpy[0] == '-')
-			float_part = -float_part;
+			double_part = -double_part;
 		free(cpy);
 	}
 	else
 	{
 		int_part = ft_atoi(str);
-		float_part = 0;
+		double_part = 0;
 	}
-	return ((float)int_part + float_part / ft_pow(ft_nbrsize(float_part), 10));
+	return ((double)int_part + double_part / ft_pow(ft_nbrsize(double_part), 10));
 }

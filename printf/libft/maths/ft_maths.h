@@ -17,10 +17,10 @@
 # include <stdio.h>
 # include "../libft.h"
 
-float	ft_sqrt(float nb);
-float	ft_div(float a, float b);
-float	ft_root(float nb, float root);
-float	ft_pow2(float nb, float pow);
+double	ft_sqrt(double nb);
+double	ft_div(double a, double b);
+double	ft_root(double nb, double root);
+double	ft_pow2(double nb, double pow);
 double	ft_pow(double base, double power);
 double	ft_pow3(double base, double power);
 int		is_prime(int nb);
