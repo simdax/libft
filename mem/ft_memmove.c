@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 18:00:51 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/25 15:15:26 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/25 16:22:48 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
-void	ft_memswap(void *a, void *b, size_t n)
+void	ft_memswap(void *b, void *a, size_t n)
 {
 		char	tmp;
 
@@ -44,5 +44,7 @@ void	ft_memswap(void *a, void *b, size_t n)
 				tmp = *(char*)a;
 				*(char*)a = *(char*)b;
 				*(char*)b = tmp;
+				++a;
+				++b;
 		}
 }

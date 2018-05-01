@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 15:09:01 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/25 15:36:31 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/25 17:01:07 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ void		array_for_each2(t_array *array, void *data,
 	}
 }
 
+#include <stdio.h>
+
 void	array_reverse(t_array *array)
 {
 		int	i;
@@ -67,6 +69,19 @@ void	array_reduce(t_array *array, void (*f)(void *a, void *b))
 	{
 			f(array->mem + array->type_len * i,
 				array->mem + array->type_len * (i + 1));
+		++i;
+	}
+}
+
+void	array_reduce_index(t_array *array, void (*f)(void *a, void *b, int i))
+{
+	unsigned	i;
+
+	i = 0;
+	while (i < array->cursor - 1)
+	{
+			f(array->mem + array->type_len * i,
+				array->mem + array->type_len * (i + 1), i);
 		++i;
 	}
 }

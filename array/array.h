@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 11:27:52 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/25 15:33:50 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/04/25 17:01:33 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ void			array_for_each(t_array *array,
 void			array_for_each2(t_array *array, void *data,
 								void (*f)(void *el, void *data, t_array *array));
 void			array_reduce(t_array *array, void (*f)(void *a, void *b));
+void			array_reduce_index(t_array *array,
+														 void (*f)(void *a, void *b, int i));
 void			array_reverse(t_array *array);
 char			*get_file_content(char *path);
 
