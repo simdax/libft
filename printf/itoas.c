@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/17 17:38:56 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/14 12:25:53 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/05/09 17:44:38 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,12 @@ static char		*u_itoa(uintmax_t val, int maj, t_num *a)
 	tmp = (char*)malloc(sizeof(char) * 65);
 	tmp[64] = '\0';
 	i = 63;
-	while ((int)val >= a->base)
+	while (val >= (uintmax_t)a->base)
 	{
 		tmp[i] = maj ?
 			"0123456789ABCDEF"[val % a->base] :
 			"0123456789abcdef"[val % a->base];
-		val /= a->base;
+		val /= (uintmax_t)a->base;
 		i--;
 	}
 	tmp[i] = maj ?
