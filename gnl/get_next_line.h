@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 10:53:07 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/16 20:02:09 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/05/09 14:58:22 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # define BUFF_SIZE		64
+# define MAX_FD				100
 
 # include <sys/types.h>
 # include <limits.h>

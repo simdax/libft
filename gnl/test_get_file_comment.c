@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 17:42:59 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/16 20:02:27 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/05/09 13:53:47 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 int	main(void)
 {
-	printf("%s", get_file_comment("io", '#'));
-	printf("%s", get_file_comment("io", '@'));
+	printf("%s", get_file_comment("tests/io", '#'));
+	printf("%s", get_file_comment("tests/io", '@'));
+	printf("%s", get_file_comment("tests/test_comment", '#'));
+	printf("%s", get_file_comment("tests/config4", '#'));
 	return (0);
 }
