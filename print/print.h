@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/24 12:11:30 by scornaz           #+#    #+#             */
-/*   Updated: 2018/01/24 12:31:32 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/05/09 18:00:28 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void			ft_putstr(char const *s);
 char			*ft_strrm(char const *s, char c, size_t n);
 void			ft_putendl(char const *s);
 void			ft_putnbr(int n);
+void			ft_putfloat(float f);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char const*s, int fd);
 void			ft_putendl_fd(char const *s, int fd);

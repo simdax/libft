@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 16:46:01 by scornaz           #+#    #+#             */
-/*   Updated: 2018/05/09 14:23:06 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/05/11 12:22:05 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,15 @@ void	ft_lstiter2(t_list *lst, void (*f)(t_list *elem, void *args), void *mem)
 }
 
 void	ft_lstiter3(t_list *lst,
-									void (*f)(t_list *elem, int i, void *args), void *mem)
+				void (*f)(t_list *elem, int i, void *args), void *mem)
 {
-		int	i;
+	int	i;
 
-		i = 0;
-		while (lst)
-		{
-				f(lst, i, mem);
-				lst = lst->next;
-				++i;
-		}
+	i = 0;
+	while (lst)
+	{
+		f(lst, i, mem);
+		lst = lst->next;
+		++i;
+	}
 }

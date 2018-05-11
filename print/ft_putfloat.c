@@ -6,7 +6,7 @@
 /*   By: acourtin <acourtin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 14:18:40 by acourtin          #+#    #+#             */
-/*   Updated: 2018/05/03 16:11:12 by acourtin         ###   ########.fr       */
+/*   Updated: 2018/05/09 18:10:35 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,9 @@ void					ft_putfloat(float f)
 	negative(&f);
 	tmp = f;
 	calculate_size(tmp, &size);
-	size_tmp = size;
+	size_tmp = 2;
 	write_float(tmp, size);
-	tmp2 = (unsigned long)(f * 1000000);
+	tmp2 = (unsigned long)(f * 1000);
 	ft_putchar('.');
 	if (tmp2 != 0)
 	{

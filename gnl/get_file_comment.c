@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 17:38:56 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/17 19:03:10 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/05/10 14:51:27 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ char	*get_file_comment(char *path, char com_char)
 		}
 		free(line);
 	}
+	array_add(array, "\0", 1);
 	line = ft_strdup(array->mem);
 	array_free(array);
 	return (line);

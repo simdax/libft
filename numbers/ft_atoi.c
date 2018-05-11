@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 13:01:04 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/17 15:19:21 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/05/11 12:23:54 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ double			ft_atof(const char *str)
 		int_part = ft_atoi(str);
 		double_part = 0;
 	}
-	return ((double)int_part + double_part / ft_pow(ft_nbrsize(double_part), 10));
+	return ((double)int_part + double_part /
+			ft_pow(ft_nbrsize(double_part), 10));
 }

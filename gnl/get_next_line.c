@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 15:54:06 by scornaz           #+#    #+#             */
-/*   Updated: 2018/05/09 14:58:52 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/05/10 14:47:37 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	copy(char **stat, char **line)
 	if ((realloc = ft_strchr(*stat, '\n')))
 	{
 		cpy = ft_strdup(realloc + 1);
-		*line = (char*)malloc(sizeof(char) * (realloc - *stat + 1));
+		*line = (char*)ft_memalloc(sizeof(char) * (realloc - *stat + 1));
 		ft_bzero(*line, realloc - *stat + 1);
 		ft_memcpy(*line, *stat, (realloc - *stat));
 		free(*stat);
@@ -57,7 +57,7 @@ int			get_next_line(int fd, char **line)
 	{
 		buf[ret] = 0;
 		len = stat[fd] ? ft_strlen(stat[fd]) : 0;
-		realloc = (char*)malloc(sizeof(char) * (len + ret + 1));
+		realloc = (char*)ft_memalloc(sizeof(char) * (len + ret + 1));
 		ft_bzero(realloc, len + ret + 1);
 		if (stat[fd])
 			ft_memcpy(realloc, stat[fd], len);

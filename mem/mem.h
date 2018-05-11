@@ -6,14 +6,14 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/24 12:08:11 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/25 15:32:53 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/05/11 12:22:59 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MEM_H
 # define MEM_H
 
-#include <stdlib.h>
+# include <stdlib.h>
 
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);

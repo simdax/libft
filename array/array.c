@@ -6,7 +6,7 @@
 /*   By: scornaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 14:40:30 by scornaz           #+#    #+#             */
-/*   Updated: 2018/04/20 13:47:12 by scornaz          ###   ########.fr       */
+/*   Updated: 2018/05/11 12:21:11 by scornaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ t_array		*array_new(size_t len, unsigned space)
 void		array_free(t_array *array)
 {
 	free(array->mem);
+	array->mem = 0;
 	free(array);
 }
 
