@@ -12,6 +12,7 @@
 
 #include "array.h"
 #include "printf.h"
+#include <inttypes.h>
 
 t_num			flags2print(va_list arg, t_flags flags)
 {

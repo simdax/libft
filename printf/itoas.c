@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "printf.h"
+#include <inttypes.h>
 
 static char		*s_itoa(intmax_t v, int maj, t_num *a)
 {
@@ -69,50 +70,50 @@ static char		*u_itoa(uintmax_t val, int maj, t_num *a)
 static void		cast_s(t_num *a, void *val)
 {
 	if (ft_strequ("hh", a->modifiers))
-		a->value = s_itoa(*(char*)val, (int)ft_strchr("DI", a->type), a);
+		a->value = s_itoa(*(char*)val, ft_strfind("DI", a->type), a);
 	else if (ft_strequ("h", a->modifiers))
-		a->value = s_itoa(*(short*)val, (int)ft_strchr("DI", a->type), a);
+		a->value = s_itoa(*(short*)val, ft_strfind("DI", a->type), a);
 	else if (ft_strequ("l", a->modifiers))
-		a->value = s_itoa(*(long*)val, (int)ft_strchr("DI", a->type), a);
+		a->value = s_itoa(*(long*)val, ft_strfind("DI", a->type), a);
 	else if (ft_strequ("ll", a->modifiers))
-		a->value = s_itoa(*(long long*)val, (int)ft_strchr("DI", a->type), a);
+		a->value = s_itoa(*(long long*)val, ft_strfind("DI", a->type), a);
 	else if (ft_strequ("j", a->modifiers))
-		a->value = s_itoa(*(intmax_t*)val, (int)ft_strchr("DI", a->type), a);
+		a->value = s_itoa(*(intmax_t*)val, ft_strfind("DI", a->type), a);
 	else if (ft_strequ("z", a->modifiers))
-		a->value = s_itoa(*(ssize_t*)val, (int)ft_strchr("DI", a->type), a);
+		a->value = s_itoa(*(ssize_t*)val, ft_strfind("DI", a->type), a);
 	else
-		a->value = s_itoa(*(int*)val, (int)ft_strchr("DI", a->type), a);
+		a->value = s_itoa(*(int*)val, ft_strfind("DI", a->type), a);
 }
 
 static void		cast_u(t_num *a, void *val)
 {
 	if (ft_strequ("hh", a->modifiers))
 		a->value = u_itoa(*(unsigned char*)val,
-						(int)ft_strchr("OUX", a->type), a);
+						ft_strfind("OUX", a->type), a);
 	else if (ft_strequ("h", a->modifiers))
 		a->value = u_itoa(*(unsigned short*)val,
-						(int)ft_strchr("OUX", a->type), a);
+						ft_strfind("OUX", a->type), a);
 	else if (ft_strequ("l", a->modifiers))
 		a->value = u_itoa(*(unsigned long*)val,
-						(int)ft_strchr("OUX", a->type), a);
+						ft_strfind("OUX", a->type), a);
 	else if (ft_strequ("ll", a->modifiers))
 		a->value = u_itoa(*(unsigned long long*)val,
-						(int)ft_strchr("OUX", a->type), a);
+						ft_strfind("OUX", a->type), a);
 	else if (ft_strequ("j", a->modifiers))
 		a->value = u_itoa(*(uintmax_t*)val,
-						(int)ft_strchr("OUX", a->type), a);
+						ft_strfind("OUX", a->type), a);
 	else if (ft_strequ("z", a->modifiers))
 		a->value = u_itoa(*(size_t*)val,
-						(int)ft_strchr("OUX", a->type), a);
+						ft_strfind("OUX", a->type), a);
 	else
 		a->value = u_itoa(*(unsigned int*)val,
-						(int)ft_strchr("OUX", a->type), a);
+						ft_strfind("OUX", a->type), a);
 }
 
 void			itoas(t_num *a, void *val)
 {
-	if (ft_strchr("diDI", a->type))
+	if (ft_strfind("diDI", a->type))
 		cast_s(a, val);
-	else if (ft_strchr("ouxOUXp", a->type))
+	else if (ft_strfind("ouxOUXp", a->type))
 		cast_u(a, val);
 }
