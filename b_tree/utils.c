@@ -47,8 +47,8 @@ inline void		print_btree(t_btree *root)
 {
 	t_point	size;
 
-	size = get_term_size();
-	size.x /= 1.5;
-	btree_apply_level(root, &size, print);
+	//size = get_term_size();
+	//size.x /= 1.5;
+	//btree_apply_level(root, &size, print);
 	printf("\n");
 }

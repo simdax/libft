@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes.h"
+#include "ft_list.h"
 
 int	ft_lstgetmax(t_list *list, int val,
 				int (*f)(t_list *el, int val, void *f),

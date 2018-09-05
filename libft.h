@@ -20,7 +20,7 @@
 # include "maths/ft_maths.h"
 # include "unicode/unicode.h"
 # include "gnl/get_next_line.h"
-# include "list/lst_includes.h"
+# include "list/ft_list.h"
 # include "string/ft_string.h"
 # include "mem/mem.h"
 # include "print/print.h"
@@ -30,7 +30,7 @@
 # define MALLOC_ERROR	write(2, "malloc error", 12); EXIT_ERROR;
 
 int				ft_notneg(int value);
-size_t			ft_nbrsize(int nbr);
+size_t		ft_nbrsize(int nbr);
 char			*ft_swapchar(char *s, int ind1, int ind2);
 char			*ft_rotate(const char *s, int rotation);
 void			ft_print_2d(char **matrix);

@@ -14,7 +14,6 @@
 # define ARRAY_H
 
 # include <stdlib.h>
-# include "mem.h"
 
 typedef struct	s_array
 {
